@@ -1,15 +1,10 @@
 // require modules
 const User = require('../modles/user')
 
-
-
-
 // handle exports
 module.exports = {
     signup
 }
-
-
 
 // define a signup controller action
     // create the user then send the user document as json 
