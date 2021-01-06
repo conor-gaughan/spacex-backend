@@ -13,7 +13,7 @@ app.use(logger('dev'));
 // app.use(cors())
 
 // mount our routes
-// app.use('/api/users', require('./routes/api')); // can use inline require statement
+app.use('/api/users', require('./routes/api/users'));
 
 const port = process.env.PORT || 3001
 

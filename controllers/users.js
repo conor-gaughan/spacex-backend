@@ -1,5 +1,5 @@
 // require modules
-const User = require('../modles/user')
+const User = require('../models/user')
 
 // handle exports
 module.exports = {
