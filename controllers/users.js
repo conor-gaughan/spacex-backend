@@ -14,7 +14,7 @@ module.exports = {
 async function signup(req, res) {
     try {
         const user = await User.create(req.body);
-
+        const userFavorites = user.favorites
         const token = createJWT(user);
 
         res.json({ token })

@@ -3,9 +3,7 @@ const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 const SALT_ROUNDS = 6;
 
-const favoriteSchema = new Schema({
-    favorite: String,
-}, { timestamps: true })
+
 
 const userSchema = new Schema({
     firstName: String,
@@ -16,12 +14,12 @@ const userSchema = new Schema({
         lowercase: true,
     },
     password: String,
-    favorites: [ favoriteSchema],
 }, { timestamps: true });
 
 userSchema.set('toJSON', {
     transform: function(doc, ret) {
-        delete ret.password
+        delete ret.password;
+        delete ret.favorites; 
         return ret;
     }
 })
